@@ -1,0 +1,23 @@
+useEffect:
+useEffect hook allows us to perform side effect in your functional components
+some example of side effect that is fetching data ,direct updating dom, and timer.
+
+useEffect hook accepts two arguments first is function and second is dependecy.second one is optional.
+useEffect runs on every render that means that when the count changes in the count a render happens which triggers another effect.
+
+there are several ways to control side effect in useEffect.for these we include the second parameter which accepts and array.we 
+cann optionally pass dependecy to useEffect in this array.
+
+1:-No dependecy
+useEffect(()=>{
+    //runs on every render.
+})
+2:- An empty array
+ useEffect(()=>{
+    //run only on first render.
+ },[])
+3:-props ands state value:
+ useEffect(()=>{
+    //runs on first render
+    //any time any dependecy value change.
+ }[props,state])
