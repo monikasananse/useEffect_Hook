@@ -21,3 +21,33 @@ useEffect(()=>{
     //runs on first render
     //any time any dependecy value change.
  }[props,state])
+
+ //execution cycle of mounting phase
+ function(){}
+         useMemo()
+return()
+
+then react updates the dom
+and then useEffect execute
+
+example:
+const MountPhase=()=>{
+   console.log(1)
+   useEffect(()=>{
+      console.log(2);
+      console.log("mounting")
+
+   })
+   console.log(3)
+   return(
+      <h1>hello monika</h1>
+
+   )
+}
+export default MountPhase;
+
+output will be
+1
+3
+2
+mounting
